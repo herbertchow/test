@@ -1,0 +1,88 @@
+*{margin:0;padding:0;}
+html,body{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+body{background: url(bg.jpg) center center no-repeat fixed #CD1A1E; -moz-background-size:cover;
+-ms-background-size:cover;
+-webkit-background-size:cover;
+background-size:cover;}
+.hand{width:3rem; height: 5rem; 
+    background:url(draw.png) no-repeat;
+    background-size: contain;
+    -webkit-background-size: contain;
+    position: absolute;
+    top: 3rem;
+    left: 50%;
+    margin-left: -1.5rem;
+    -webkit-animation: handMove infinite 2s;
+    animation: handMove infinite 2s;
+}
+.result{background: #831A17; border: #AF1D15. 1rem solid; box-shadow: inset #D85657 0 0 0. 1rem; border-radius: .10rem; color: #fff; 
+    padding: .10rem; width: 4rem; 
+    position: absolute; bottom: 3.5rem;
+     left: 50%; margin-left: -2rem; 
+     opacity: 0;-webkit-transition: all 1s;
+     transition: all 1s;}
+.result .pic{width: .50rem; height: .50rem; float: left; position: absolute;}
+.result .pic img{width: .48rem; height: .48rem;padding:. 1rem;}
+.result .con{
+    text-align: center;
+    text-indent: 0;
+    overflow: hidden; zoom: 1;
+ padding-left: .10rem;
+ line-height: .4rem;
+    font-size: .28rem;}
+.result-show{opacity: 1; margin-top: .50rem;}
+.loading{position: absolute; top: 2.40rem; left: 50%; margin-left: -.50rem; width: 1.00rem; height: 1.00rem; background: url(spinner.png) no-repeat; background-size: 1.00rem 1.00rem; opacity: 0;-webkit-animation: loading infinite linear .5s;}
+.loading-show{opacity: 1;}
+.fade{
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+    z-index: 1000;
+    top: 0;
+    left: 0;
+}
+h1{
+    font-size: .5rem;
+    color: #ffca00;
+    padding-top: 1rem;
+    text-align: center;
+    text-indent: 0;
+}
+@-webkit-keyframes handMove{
+    0%{
+        -webkit-transform: rotate(0);
+        transform: rotate(0);
+    }
+    25%{
+        -webkit-transform: rotate(15deg);
+        transform: rotate(15deg);
+    }
+    50%{
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    75%{
+        -webkit-transform: rotate(-15deg);
+        transform: rotate(-15deg);
+    }
+    100%{
+        -webkit-transform: rotate(0);
+        transform: rotate(0);
+    }
+}
+@-webkit-keyframes loading{
+    0%{
+        -webkit-transform: rotate(0);
+        transform: rotate(0);
+    }
+    100%{
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
