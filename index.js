@@ -58,11 +58,11 @@ window.onload = function(){
             document.getElementById("result").className = 'result result-show';
             document.getElementById("loading").className = 'loading';
             $('.fade').hide();
-        }, 1*1000);
+        }, 3*1000);
 
     }
 
-    $('.hand').on('click',function(){
-        showResult();
-    });
+    // $('.hand').on('click',function(){
+    //     showResult();
+    // });
 };
